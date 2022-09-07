@@ -18,6 +18,8 @@ apk update
 
 apk add docker
 
+mkdir -p /etc/docker
+
 cat > /etc/docker/daemon.json << EOF; $(echo)
 {
   "log-driver": "json-file",
