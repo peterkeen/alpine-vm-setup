@@ -16,7 +16,7 @@ EOF
 
 apk update
 
-apk add docker
+apk add docker qemu-guest-agent
 
 mkdir -p /etc/docker
 
@@ -33,6 +33,9 @@ EOF
 
 rc-update add docker
 rc-service docker start
+
+rc-update add qemu-guest-agent
+rc-service start qemu-guest-agent
 
 mkdir -p /var/lib/docker/stack_configs
 
