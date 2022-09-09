@@ -32,7 +32,7 @@ cat > /etc/docker/daemon.json << EOF; $(echo)
 EOF
 
 rc-update add docker
-rc-service start docker
+rc-service docker start
 
 mkdir -p /var/lib/docker/stack_configs
 
