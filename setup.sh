@@ -31,7 +31,7 @@ rc-update add docker
 rc-service docker start
 
 rc-update add qemu-guest-agent
-rc-service start qemu-guest-agent
+rc-service qemu-guest-agent start
 
 mkdir -p /var/lib/docker/stack_configs
 
