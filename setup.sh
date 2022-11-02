@@ -12,7 +12,7 @@ EOF
 
 apk update
 
-apk add docker qemu-guest-agent tailscale
+apk add docker qemu-guest-agent tailscale curl logrotate
 
 mkdir -p /etc/docker
 
