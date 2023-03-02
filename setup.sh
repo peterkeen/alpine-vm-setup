@@ -44,4 +44,6 @@ docker network inspect tailnet > /dev/null 2>&1 || docker network create -d brid
 
 docker login ghcr.io
 
+docker pull ghcr.io/keenfamily-us/dockerstack-keenland:main
+
 docker inspect dockerstack-root > /dev/null 2>&1 || docker run --init --restart=unless-stopped -d -it -v /root/.docker:/root/.docker -v /var/lib/docker/stack_configs:/configs -v /var/run/docker.sock:/var/run/docker.sock -v /etc/hostname:/app/hostname:ro -e CONFIGS_DIR=/var/lib/docker/stack_configs --name dockerstack-root -l dockerstack-root ghcr.io/keenfamily-us/dockerstack-keenland:main
